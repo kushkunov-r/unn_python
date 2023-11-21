@@ -1,0 +1,19 @@
+list=[5,7,20,65,41,32,58,4,34,3]
+print(list)
+max=list[0]
+for i in list:
+    if i>max:
+        max=i
+        max_index=list.index(i)
+#print("max =",max)
+#print("max_index =",max_index)
+min=list[0]
+for i in list:
+    if i<min:
+        min=i
+        min_index=list.index(i)
+#print("min = ",min)
+#print("min_index =",min_index)
+list[max_index]=min
+list[min_index]=max
+print(list)
