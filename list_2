@@ -1,0 +1,17 @@
+import random
+list1=[]
+list2=[]
+list3=[]
+for i in range(0,10):
+    n=random.randint(1,10)
+    list1.append(n)
+print(list1)
+for i in list1:
+    if list1.count(i)>1:
+        list2.append(i)
+print(list2)
+for i in list2:
+    if not i in list3:
+        list3.append(i)
+        list3.append(list2.count(i))
+print(list3)
