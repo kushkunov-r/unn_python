@@ -1,0 +1,23 @@
+list=[]
+if a%2==0:
+    list.append(2)
+if a%3==0:
+    list.append(3)
+if a%4==0:
+    list.append(4)
+if a%5==0:
+    list.append(5)
+if a%6==0:
+    list.append(6)
+if a%7==0:
+    list.append(7)
+if a%8==0:
+    list.append(8)
+if a%9==0:
+    list.append(9)
+if a%10==0:
+    list.append(10)
+if list:
+    print("Делители данного числа:",list)
+else: 
+    print("Это простое число")
