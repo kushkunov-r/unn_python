@@ -1,0 +1,22 @@
+import random
+a=int(input("Введите число 'a' от 1 до 1000: "))
+b=int(input("Введите число 'b' от 1 до 1000: "))
+c=int(input("Введите число 'c' от 1 до 1000: "))
+d=random.randint(1,1000)
+e=random.randint(1,1000)
+if e>d:
+    print("Отрезок от",d,"до",e)
+    if d<a and a<e:
+        print("Число 'a' попало в отрезок")
+    if d<b and b<e:
+        print("Число 'b' попало в отрезок")
+    if d<c and c<e:
+        print("Число 'c' попало в отрезок")
+else:
+    print("Отрезок от",e,"до",d)
+    if e<a and a<d:
+        print("Число 'a' попало в отрезок")
+    if e<b and b<d:
+        print("Число 'b' попало в отрезок")
+    if e<c and c<d:
+        print("Число 'c' попало в отрезок")
