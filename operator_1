@@ -1,0 +1,22 @@
+import random
+
+a1 = int(input("Введите первое число от 1 до 1000: "))
+a2 = int(input("Введите первое число от 1 до 1000: "))
+a3 = int(input("Введите первое число от 1 до 1000: "))
+b1, b2 = random.randint(1, 100), random.randint(1, 100)
+
+if b1 > b2:
+    start = b2
+    end = b1
+else:
+    start = b1
+    end = b2
+
+print("Отрезок от", start, "до", end)
+
+if (a1 >= start) and (a1 <= end):
+    print("Число", a1, "попало в отрезок")
+if (a2 >= start) and (a2 <= end):
+    print("Число", a2, "попало в отрезок")
+if (a3 >= start) and (a3 <= end):
+    print("Число", a3, "попало в отрезок")
