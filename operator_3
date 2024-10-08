@@ -13,7 +13,6 @@ by2 = int(input("Введите Y нижнего правого угла вто�
 
 cx2 = ax2
 cy2 = by2
-
 dx2 = bx2
 dy2 = ay2
 
@@ -27,8 +26,6 @@ if (cx2 >= ax1) and (cx2 <= bx1) and (cy2 <= ay1) and (cy2 >= by1):
     count = count + 1
 if (dx2 >= ax1) and (dx2 <= bx1) and (dy2 <= ay1) and (dy2 >= by1):
     count = count + 1
-
-print(count)
 
 if (count > 0) and (count < 3):
     print("Прямоугольники пересекаются")
