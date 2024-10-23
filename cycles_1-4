@@ -1,0 +1,6 @@
+otvet = 0
+while otvet != "y" and otvet != "Y":
+    a = int(input("Введите первое число: "))
+    b = int(input("Введите второе число: "))
+    print("Сумма чисел:", a + b)
+    otvet = input("Завершить программу? [y or Y]")
