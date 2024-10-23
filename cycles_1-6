@@ -1,0 +1,26 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+if a > b:
+    start = b
+    end = a
+else:
+    start = a
+    end = b
+
+del3 = 0
+del5 = 0
+del9 = 0
+
+while start <= end:
+    if start % 3 == 0:
+        del3 = del3 + 1
+    if start % 5 == 0:
+        del5 = del5 + 1
+    if start % 9 == 0:
+        del9 = del9 + 1
+    start = start + 1
+
+print("Количество чисел которые делятся нацело на 3 =", del3)
+print("Количество чисел которые делятся нацело на 5 =", del5)
+print("Количество чисел которые делятся нацело на 9 =", del9)
