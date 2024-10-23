@@ -1,0 +1,22 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+if a > b:
+    start = b
+    end = a
+else:
+    start = a
+    end = b
+
+if start < 2:
+    start = 2
+
+print("Простые числа на заданном интервале:")
+
+while start <= end:
+  d = 2
+  while start % d != 0:
+    d = d + 1
+  if d == start:
+    print(start)
+  start = start + 1
