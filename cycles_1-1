@@ -1,0 +1,21 @@
+a, b = int(input("Введите границу отрезка: ")), int(input("Введите границу отрезка: "))
+
+if a > b:
+    start = b
+    end = a
+else:
+    start = a
+    end = b
+    
+summ_chetn = 0
+pr_nechetn = 1
+
+while start <= end:
+    if start % 2 == 0:
+        summ_chetn = summ_chetn + start
+    else:
+        pr_nechetn = pr_nechetn * start
+    start = start + 1
+    
+print("Сумма четных чисел в отрезке =", summ_chetn)
+print("Произведение нечетных чисел в отрезке =", pr_nechetn)
