@@ -17,6 +17,6 @@ while start <= end:
   d = 2
   while start % d != 0:
     d = d + 1
-    if d == start:
-      print(start)
+  if d == start:
+    print(start)
   start = start + 1
