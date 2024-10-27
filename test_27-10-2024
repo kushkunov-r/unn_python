@@ -1,0 +1,19 @@
+a = " "
+b = "*"
+
+count_star = 2
+count_space = 1
+
+for i in range(0, 2):
+    print(a * count_space + b * count_star, a * 2 * count_space + b * count_star)
+    count_star = count_star + 2
+    count_space = count_space - 1
+
+
+count_star = 9
+count_space = 0
+
+for i in range(0, 5):
+    print(a * count_space + b * count_star)
+    count_star = count_star - 2
+    count_space = count_space + 1
