@@ -26,8 +26,8 @@ for i in range(0, a):
         count_d2 = count_d2 + 1
 
 if count_d1 > count_d2:
-    print("Победил первый датчик со счетом ", count_d1, count_d2)
+    print("Победил первый датчик со счетом ", count_d1, ">", count_d2)
 elif count_d2 > count_d1:
-    print("Победил второй датчик со счетом ", count_d2, count_d1)
+    print("Победил второй датчик со счетом ", count_d2, ">", count_d1)
 else:
     print("Ничья, счет ", count_d1, count_d2)
