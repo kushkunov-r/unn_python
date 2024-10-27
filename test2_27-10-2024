@@ -1,0 +1,33 @@
+import random
+
+while True:
+    a = int(input("Введите первое число от 2 до 100: "))
+    if a >= 2 and a <= 100:
+        break
+
+d1 = []
+d2 = []
+
+for i in range(0, a):
+    d1.append(random.randint(0, 1000))
+for i in range(0, a):
+    d2.append(random.randint(0, 1000))
+
+print("Первый датчик сгенерировал числа: ", d1)
+print("Второй датчик сгенерировал числа: ", d2)
+
+count_d1 = 0
+count_d2 = 0
+
+for i in range(0, a):
+    if d1[i] > d2[i]:
+        count_d1 = count_d1 + 1
+    else:
+        count_d2 = count_d2 + 1
+
+if count_d1 > count_d2:
+    print("Победил первый датчик со счетом ", count_d1, count_d2)
+elif count_d2 > count_d1:
+    print("Победил второй датчик со счетом ", count_d2, count_d1)
+else:
+    print("Ничья, счет ", count_d1, count_d2)
