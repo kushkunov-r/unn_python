@@ -9,7 +9,6 @@ print("Исходный список:", list)
 
 for i in list:
     if list.count(i) > 1:
-        del_element = i
-        print(del_element, "повторяется", list.count(del_element), "раз(а)")
-        while list.count(del_element) != 0:
-            list.remove(del_element)
+        print(i, "повторяется", list.count(i), "раз(а)")
+        while list.count(i) != 0:
+            list.remove(i)
