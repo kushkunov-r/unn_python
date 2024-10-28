@@ -1,0 +1,24 @@
+import random
+
+list = []
+
+for i in range(random.randint(5, 10)):
+    list.append(random.randint(100, 500))
+
+print("Исходный список:", list)
+
+max = list[0]
+min = list[0]
+
+for i in list:
+    if i > max:
+        max = i
+    if i < min:
+        min = i
+
+print("Максимум:", max, "Минимум:", min)
+
+list[list.index(max)] = min
+list[list.index(min)] = max
+
+print("Поменяли местами в списке максимум и минимум:", list)
