@@ -1,0 +1,20 @@
+list = [[1, 2, 3], [2, 6, 4], [3, 4, 5], [6, 3, 7]]
+
+list_big = []
+exclusive = []
+repeat = []
+
+for i in list:
+    for j in i:
+        list_big.append(j)
+
+for i in list_big:
+    if list_big.count(i) == 1:
+        exclusive.append(i)
+    else:
+        if repeat.count(i) == 0:
+            repeat.append(i)
+
+print("Исходный список списков:", list)
+print("Список элементов без повторений:", exclusive)
+print("Список повторяющихся элементов:", repeat)
