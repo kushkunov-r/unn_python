@@ -1,0 +1,15 @@
+import random
+
+list = []
+
+for i in range(10):
+    list.append(random.randint(1, 10))
+
+print("Исходный список:", list)
+
+for i in list:
+    if list.count(i) > 1:
+        del_element = i
+        print(del_element, "повторяется", list.count(del_element), "раз(а)")
+        while list.count(del_element) != 0:
+            list.remove(del_element)
