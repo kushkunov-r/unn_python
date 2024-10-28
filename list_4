@@ -9,8 +9,7 @@ print("Исходный список:", list)
 
 for i in list:
     if list.count(i) > 1:
-        del_element = i
-        while list.count(del_element) != 0:
-            list.remove(del_element)
+       while list.count(i) != 0:
+            list.remove(i)
 
 print("Список после удаления всех повторяющихся элементов:", list)
