@@ -1,0 +1,26 @@
+import random
+
+size = int(input("Введите размер матрицы: "))
+
+table = []
+
+for i in range(size):
+    row = []
+    for j in range(size):
+        row.append(random.randint(0, 100))
+    table.append(row)
+    print(row)
+
+min = table[0][0]
+
+for i in range(size):
+    for j in range(size):
+        if table[i][j] < min:
+            min = table[i][j]
+
+print("Минимум:", min)
+
+for i in range(size):
+    for j in range(size):
+        if table[i][j] == min:
+            print("Колонка:", j, "Строка:", i)
