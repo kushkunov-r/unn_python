@@ -1,0 +1,18 @@
+List_vlan=[10,20,30,40]
+list_interface=["fa0/1","fa0/2","fa0/3","fa0/4"]
+list_interface_config=[
+    {"speed":100, "duplex":"full","mode":" switchport mode access ", "vlan":11},
+    {"speed":100, "duplex":"full","mode":"switchport mode access","vlan":20},
+    {"speed":100, "duplex":"full","mode":"switchport mode access","vlan":30},
+    {"speed":100, "duplex":"full","mode":" switchport mode access ", "vlan":42}
+]
+
+interfaces = {}
+for i in range(len(list_interface)):
+    interfaces.setdefault(list_interface[i], list_interface_config[i])
+
+for i in interfaces:
+    for j in List_vlan:
+        if interfaces[i]["vlan"] == j:
+            list_interface.remove(i)
+print("Порты", list_interface, "заблокированы")
