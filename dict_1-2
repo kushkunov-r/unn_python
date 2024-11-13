@@ -1,0 +1,16 @@
+list_interface=["fa0/1","fa0/2","fa0/3","fa0/4"]
+list_interface_config=[
+    {"speed":100, "duplex":"full","mode":"switchport mode trunk", "switchport allowed vlan":[10,20,30]},
+    {"speed":100, "duplex":"full","mode":"switchport mode access","vlan":20},
+    {"speed":100, "duplex":"full","mode":"switchport mode access","vlan":30},
+    {"speed":100, "duplex":"full","mode":"switchport mode trunk", "switchport allowed vlan":[11,21,31]}
+]
+
+interfaces = {}
+
+for i in range(len(list_interface)):
+    interfaces[list_interface[i]] = list_interface_config[i]
+
+for i in interfaces:
+    if interfaces[i]["mode"] == "switchport mode trunk":
+        print(i, interfaces[i]["switchport allowed vlan"])
