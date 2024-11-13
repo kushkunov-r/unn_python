@@ -1,0 +1,53 @@
+Dict_sw_1={"fa0/1": {"sw2":"fa0/1"}, "fa0/3": {"sw3":"fa0/3"}}
+Dict_sw_1_interface={"fa0/1": {"switchport allowed vlan":[10,20,30]}, "fa0/3": {"switchport allowed vlan":[13,23,33]}}
+
+Dict_sw_2={"fa0/1": {"sw1":"fa0/1"}, "fa0/2": {"sw3":"fa0/2"}}
+Dict_sw_2_interface={"fa0/1": {"switchport allowed vlan":[10,20,30]}, "fa0/2": {"switchport allowed vlan":[12,22,32]}}
+
+Dict_sw_3={"fa0/2": {"sw2":"fa0/2"}, "fa0/3": {"sw1":"fa0/3"}}
+Dict_sw_3_interface={"fa0/2": {"switchport allowed vlan":[12,22,32]}, "fa0/3": {"switchport allowed vlan":[13,23,33]}}
+
+while True:
+    vlan = int(input("Введите номер VLAN [1-4094]:"))
+    if vlan >= 1 and vlan <= 4094:
+        break
+    
+while True:
+    switch1 = input("Введите первый коммутатор [sw1/sw2/sw3]:")
+    if switch1 == "sw1" or switch1 == "sw2" or switch1 == "sw3":
+        break
+    
+while True:
+    switch2 = input("Введите второй коммутатор [sw1/sw2/sw3]:")
+    if switch2 == "sw1" or switch2 == "sw2" or switch2 == "sw3":
+        break
+
+all_sw = [Dict_sw_1, Dict_sw_2, Dict_sw_3]
+all_sw_int = [Dict_sw_1_interface, Dict_sw_2_interface, Dict_sw_3_interface]
+
+for iter in range(len(all_sw)):
+    list = []
+    for i in all_sw[iter]:
+        for k in (all_sw[iter][i].keys()):
+            list.append(k)
+    if list.count(switch1) == 0:
+        sw1 = all_sw[iter].copy()
+        sw1_int = all_sw_int[iter].copy()
+    if list.count(switch2) == 0:
+        sw2 = all_sw[iter].copy()
+        sw2_int = all_sw_int[iter].copy()
+
+for i in sw1:
+    if (sw1[i].get(switch2)) != None:
+        a = sw1[i].get(switch2)
+        sw1_all_tr = sw1_int[a]["switchport allowed vlan"]
+        
+for i in sw2:
+    if (sw2[i].get(switch1)) != None:
+        a = sw2[i].get(switch1)
+        sw2_all_tr = sw2_int[a]["switchport allowed vlan"]
+
+if sw1_all_tr.count(vlan) > 0 and sw2_all_tr.count(vlan) > 0:
+    print("Пройдет")
+else:
+    print("Не пройдет")
