@@ -1,0 +1,30 @@
+Mac_address_table = {
+    "fa0/1": ["1111.1111.1111", "vlan 10"],
+    "fa0/2": ["1111.1111.2222", "vlan 10"], 
+    "fa0/3": ["1111.1111.3333", "vlan 20"], 
+    "fa0/4": ["1111.1111.4444", "vlan 20"], 
+    "fa0/5": ["1111.1111.5555", "vlan 70"], 
+    "fa0/7": ["1111.1111.7777", "vlan 10"], 
+    "fa0/6": ["1111.1111.8888", "vlan 70"]
+}
+
+flooding_list = []
+all_mac = []
+
+mac = input("Введите MAC-адресс получателя [1111.1111.1111]:")
+port = input("Введите порт [fa0/1]")
+
+for i in Mac_address_table:
+    all_mac.append(Mac_address_table[i][0])
+
+for i in Mac_address_table:
+    if Mac_address_table[i][1] != Mac_address_table[port][1] and i != port and Mac_address_table[i][0] == mac:
+        print("Filtering")
+    elif Mac_address_table[i][1] == Mac_address_table[port][1] and i != port:
+        if Mac_address_table[i][0] == mac:
+            print("Forwarding", i)
+        elif all_mac.count(mac) == 0:
+            flooding_list.append(i)
+
+if len(flooding_list) != 0:
+    print("Flooding", flooding_list)
