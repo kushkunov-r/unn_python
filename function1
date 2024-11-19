@@ -1,0 +1,38 @@
+def InputOtrezok():
+    a = int(input("Задайте отрезок: "))
+    b = int(input("Задайте отрезок: "))
+    if a < b:
+        print("Задан отрезок от", a, "до", b)
+        return a, b
+    else:
+        print("Задан отрезок от", b, "до", a)
+        return b, a
+
+def del3(a, b):
+    count = 0
+    while a <= b:
+        if a % 3 == 0:
+            count = count + 1
+        a = a + 1
+    print("Количество чисел в отрезке, которые делятся нацело на 3:", count)
+    
+def del4(a, b):
+    count = 0
+    while a <= b:
+        if a % 4 == 0:
+            count = count + 1
+        a = a + 1
+    print("Количество чисел в отрезке, которые делятся нацело на 4:", count)
+    
+def del5(a, b):
+    count = 0
+    while a <= b:
+        if a % 5 == 0:
+            count = count + 1
+        a = a + 1
+    print("Количество чисел в отрезке, которые делятся нацело на 5:", count)
+
+start, end = InputOtrezok()
+del3(start, end)
+del4(start, end)
+del5(start, end)
