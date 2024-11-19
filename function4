@@ -1,0 +1,16 @@
+import random
+
+list = []
+
+for i in range(10):
+    list.append(random.randint(1, 5))
+
+def count_element_in_list(a): #Подаем на вход список
+    counter = []
+    for i in a:
+        if counter.count(i) == 0:
+            print(i, "повторяется", a.count(i), "раз(а)")
+            counter.append(i)
+
+print(list)
+count_element_in_list(list)
