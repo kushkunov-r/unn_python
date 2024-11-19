@@ -1,0 +1,16 @@
+def test():
+    a = int(input("Введите число:"))
+    if a > 0:
+        positive()
+    elif a < 0:
+        negative()
+    else:
+        print("0 не является положительным или отрицательным")
+
+def positive():
+    print("Число положительное")
+    
+def negative():
+    print("Число отрицательное")
+    
+test()
