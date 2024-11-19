@@ -10,7 +10,4 @@ def get_int_vlan_map(config):
                 trunk[interface] = (line.split()[-1]).split(",")
     return(access, trunk)
 
-interface_access, interface_trunk = get_int_vlan_map("config_sw1.txt")
-
-print("Интерфейсы в режиме Access:\n", interface_access,"\n")
-print("Интерфейсы в режиме Trunk:\n", interface_trunk)
+print(get_int_vlan_map("config_sw1.txt"))
