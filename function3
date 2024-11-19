@@ -1,0 +1,14 @@
+def cylinder():
+    r = int(input("Введите радиус круга:"))
+    def circle(a): #Подаем на вход радиус круга
+        import math
+        s = math.pi * a * 2
+        return s
+    h = int(input("Введите высоту:"))
+    otvet = input("Вычислить только площадь боковой поверхности цилиндра? Иначе будет вычеслена полная площадь цилиндра [yes]")
+    if otvet == "yes" or otvet == "Yes" or otvet == "YES":
+        print("Площадь боковой поверхности цилиндра:", circle(r) * h)
+    else:
+        print("Полная площадь цилиндра:", circle(r) * h + 2 * circle(r))
+
+cylinder()
