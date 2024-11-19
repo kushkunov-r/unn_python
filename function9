@@ -1,0 +1,16 @@
+def get_int_vlan_map(config):
+    access, trunk = {}, {}
+    with open(config) as f:
+        for line in f:
+            if "FastEthernet" in line:
+                interface = line.split()[1]
+            elif "switchport access vlan" in line:
+                access[interface] = line.split()[-1]
+            elif "switchport trunk allowed vlan" in line:
+                trunk[interface] = (line.split()[-1]).split(",")
+    return(access, trunk)
+
+interface_access, interface_trunk = get_int_vlan_map("config_sw1.txt")
+
+print("Интерфейсы в режиме Access:\n", interface_access,"\n")
+print("Интерфейсы в режиме Trunk:\n", interface_trunk)
