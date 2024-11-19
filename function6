@@ -1,0 +1,20 @@
+import random
+
+list1 = []
+list2 = []
+
+for i in range(10):
+    list1.append(random.randint(0, 50))
+    list2.append(random.randint(0, 50))
+    
+def dif_lists(a, b): #Подаем на вход два списка
+    list = []
+    for i in range(len(a)):
+        list.append(a[i] - b[i])
+    return list
+    
+list = dif_lists(list1, list2)
+
+print("Первый список:", list1)
+print("Второй список:", list2)
+print("Разница списков:", list)
