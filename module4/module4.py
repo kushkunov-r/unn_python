@@ -1,4 +1,4 @@
-command_output = (open("sh_cdp_n_r1.txt", "r")).read()
+command_output = (open("sh_cdp_n_r3.txt", "r")).read()
 
 def parse_cdp_neighbors(a):
     dict_connect = {}
