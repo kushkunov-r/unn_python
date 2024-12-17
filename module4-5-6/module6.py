@@ -10,7 +10,6 @@ def unique_network_map(topology_dict):
     
     return unique_dict
     
-
 if __name__ == "__main__":
     infiles = ["sh_cdp_n_r1.txt", "sh_cdp_n_r2.txt", "sh_cdp_n_r3.txt"] 
     draw_topology(unique_network_map(create_network_map(infiles)))    
