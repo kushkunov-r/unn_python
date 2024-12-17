@@ -23,5 +23,5 @@ def parse_cdp_neighbors(a):
     return(dict_connect)
 
 if __name__ == "__main__":
-    command_output = (open("sh_cdp_n_r1.txt", "r")).read()
-    print(parse_cdp_neighbors(command_output))
+    with open("sh_cdp_n_r1.txt") as f:
+        print(parse_cdp_neighbors(f.read()))
