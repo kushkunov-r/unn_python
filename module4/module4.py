@@ -1,5 +1,3 @@
-command_output = (open("sh_cdp_n_r3.txt", "r")).read()
-
 def parse_cdp_neighbors(a):
     dict_connect = {}
     my_hostname = ""
@@ -23,5 +21,7 @@ def parse_cdp_neighbors(a):
         start = start + 10
     
     return(dict_connect)
-        
-print(parse_cdp_neighbors(command_output))
+
+if __name__ == "__main__":
+    command_output = (open("sh_cdp_n_r1.txt", "r")).read()
+    print(parse_cdp_neighbors(command_output))
