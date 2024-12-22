@@ -18,5 +18,6 @@ dict = {
     }
 
 ospf_area = 0
+#123
 
 print(generate_config_ospf(dict, ospf_area))
