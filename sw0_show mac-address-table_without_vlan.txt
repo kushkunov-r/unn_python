@@ -1,0 +1,19 @@
+Switch#show mac-address-table 
+          Mac Address Table
+-------------------------------------------
+
+Mac Address       Type        Ports
+-----------       --------    -----
+
+0060.3e69.2601    DYNAMIC     Fa0/1
+000a.411a.eac1    DYNAMIC     Fa0/3
+0060.3e69.2601    DYNAMIC     Fa0/1
+0060.704b.0560    DYNAMIC     Fa0/1
+0003.e437.2394    DYNAMIC     Fa0/4
+0060.3e69.2601    DYNAMIC     Fa0/1
+000a.41a2.41c5    DYNAMIC     Fa0/1
+0060.3e69.2601    DYNAMIC     Fa0/1
+0090.0c23.36ed    DYNAMIC     Fa0/5
+0060.3e69.2601    DYNAMIC     Fa0/1
+0060.3e69.2601    DYNAMIC     Fa0/1
+0060.3e69.2601    DYNAMIC     Fa0/1
