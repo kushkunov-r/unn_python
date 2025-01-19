@@ -1,7 +1,7 @@
 import csv
 
 def write_dhcp_snooping_to_csv(filenames, output):
-    output_list = [["switch", "mac", "ip", "vlan", "interface"], ]
+    output_list = [["switch", "mac", "ip", "vlan", "interface"]]
     for i in filenames:
         hostname = i.split("_")[0]
         with open(i, "r") as dhcp_snooping:
