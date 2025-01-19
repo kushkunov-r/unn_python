@@ -8,8 +8,10 @@ def write_dhcp_snooping_to_csv(filenames, output):
             for line in dhcp_snooping:
                 if ":" in line.split()[0]:
                     output_list.append([hostname, line.split()[0], line.split()[1], line.split()[4], line.split()[5]])
-                    
-    print(output_list)
+    with open(output, "w") as out:
+        writer = csv.writer(out)
+        for row in output_list:
+            writer.writerow(row)
 
 files = ["sw1_dhcp_snooping.txt", "sw2_dhcp_snooping.txt", "sw3_dhcp_snooping.txt"]
 out = "output_snooping.csv"
